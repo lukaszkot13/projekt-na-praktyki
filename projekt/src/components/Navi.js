@@ -1,11 +1,11 @@
 import * as React from "react";
-import {
+import { 
 	AppBar,
-	Box,
 	Toolbar,
+	makeStyles,
 	Typography,
 	Button,
-	IconButton,
+	
 } from "@material-ui/core";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
@@ -17,30 +17,37 @@ const Logo = styled.div`
 	height: 20px;
 `;
 
-// const Menu = styled.div`
-// 	justify-content: flex-end;
-// `;
+const useStyles = makeStyles({
+
+
+	title: {
+		flexGrow: 10,
+	   },
+  
+	
+  });
+
 
 function Navi() {
-	return (
-		<Box position="sticky"  sx={{ alignContent: "space-between" }}>
-			<AppBar position="sticky">
-				<Toolbar>
-					<IconButton
-						size="large"
-						edge="start"
-						color="inherit"
-						aria-label="menu"
-						sx={{ mr: 8 }}
-					></IconButton>
-					<div>
-						<Typography>
-							<Logo>
-								<img src={Mylogo} className="logo" alt="logo" />
-							</Logo>
-						</Typography>
-					</div>
 
+	const classes = useStyles()
+
+	return (
+		<div>
+			<AppBar>
+				<Toolbar >
+				
+						<Typography variant='h6' className={classes.title}>
+							<Logo>
+							<Link to="/">
+							<img src={Mylogo} className="logo" alt="logo" />
+							</Link>
+							</Logo>
+							
+					
+						</Typography>
+						
+						
 					<Link to="/omnie">
 						<Button color="inherit">O mnie</Button>
 					</Link>
@@ -59,9 +66,10 @@ function Navi() {
 					<Link to="/logowanie">
 						<Button color="inherit">logowanie</Button>
 					</Link>
+				
 				</Toolbar>
 			</AppBar>
-		</Box>
+	</div>
 	);
 }
 

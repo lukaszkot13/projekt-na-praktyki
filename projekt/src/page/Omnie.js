@@ -3,18 +3,17 @@ import { Typography } from "@material-ui/core";
 
 import MyLogo from "../image/tlo_omnie.jpg";
 import Dane from "../components/Dane";
-import Milly from '../image/milly.jpg'
+import Milly from "../image/milly.jpg";
 
-const Fotka =styled.div`
-background-position: center;
-background-size: cover;
-border-radius: 50%;
-background-image: url(${Milly});
-width: 300px;
-height: 300px;
-margin-top: 3%;
-
-`
+const Fotka = styled.div`
+	background-position: center;
+	background-size: cover;
+	border-radius: 50%;
+	background-image: url(${Milly});
+	width: 300px;
+	height: 300px;
+	margin-top: 7%;
+`;
 
 const Container = styled.div`
 	background-image: url(${MyLogo});
@@ -24,26 +23,23 @@ const Container = styled.div`
 	flex-direction: column;
 	align-items: center;
 	justify-content: start;
-	height:150vh; 
-  	width:100%; 
+	height: 150vh;
+	width: 100%;
 	position: relative;
 `;
-
-
 
 function Omnie() {
 	return (
 		<Container>
-			
 			<Fotka />
-				<br/>
+			<br />
 			<Typography
 				variant="button"
 				variant="h2"
 				display="block"
 				gutterBottom
 			>
-				{Dane.imie}  
+				{Dane.imie}
 			</Typography>
 			<Typography
 				variant="button"
@@ -51,11 +47,12 @@ function Omnie() {
 				display="block"
 				gutterBottom
 			>
-				  {Dane.nazwisko}
+				{Dane.nazwisko}
 			</Typography>
-			
-			<Typography variant="body1" variant='h3' gutterBottom>{Dane.tekst}</Typography>
-	
+
+			<Typography variant="body1" variant="h3" gutterBottom>
+				{Dane.tekst}
+			</Typography>
 		</Container>
 	);
 }
