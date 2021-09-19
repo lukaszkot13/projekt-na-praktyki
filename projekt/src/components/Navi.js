@@ -23,8 +23,8 @@ const Logo = styled.div`
 
 function Navi() {
 	return (
-		<Box sx={{ alignContent: "space-between" }}>
-			<AppBar position="static">
+		<Box position="sticky"  sx={{ alignContent: "space-between" }}>
+			<AppBar position="sticky">
 				<Toolbar>
 					<IconButton
 						size="large"

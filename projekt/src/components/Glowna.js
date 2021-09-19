@@ -1,3 +1,4 @@
+import React from "react";
 import MyLogo from "../image/tlo.jpg";
 import styled from "styled-components";
 
@@ -8,14 +9,16 @@ const Tlo = styled.div`
 	background-size: cover;
 `;
 
-function Logowanie() {
+const Glowna = () => {
 	return (
 		<div>
 			<Tlo>
-				<button>Logowanie </button>
+				<h1>Tytuł strony</h1>
+				<h3>opis strony</h3>
+				<input type="text">Wyszukiwarka</input> <button>Szukaj</button>
 			</Tlo>
 		</div>
 	);
-}
+};
 
-export default Logowanie;
+export default Glowna;
