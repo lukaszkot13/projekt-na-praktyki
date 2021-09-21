@@ -17,23 +17,19 @@ const Container = styled.div`
 	flex-direction: column;
 	align-items: center;
 	height: 120vh;
-	width: 100%; ;
+	width: 100%;
 `;
 const useStyles = makeStyles({
 	page: {
 		display: "column",
-		alignSelf: "flex-end",
-		marginTop: "5%",
+		alignSelf: "center",
+		// justifyContent: "center",
+		// alignItems: "center",
+		marginTop: "10%",
 		marginLeft: "5%",
 		marginRight: "5%",
 	},
-	title: {
-		alignSelf: "center",
-		variant: "h2",
-		component: "div",
-		color: "textSecondary",
-		color: "secondary",
-	},
+
 	szukaj: {
 		width: 300,
 		height: 60,
@@ -52,10 +48,20 @@ function MPage() {
 		<div>
 			<Container>
 				<Typography className={classes.page}>
-					<Typography className={classes.title}>
+					<Typography
+						variant="h2"
+						component="div"
+						gutterBottom
+						color={("textSecondary", "secondary")}
+					>
 						To jest mój pierwszy projekt w React
 					</Typography>
-					<Typography className={classes.title}>
+					<Typography
+						variant="overline"
+						display="block"
+						gutterBottom
+						color="initial"
+					>
 						Lorem, ipsum dolor sit amet consectetur adipisicing
 						elit. Laboriosam, magni quae? Provident eveniet a iste.
 						Eius officia, maxime odio obcaecati aspernatur hic sint

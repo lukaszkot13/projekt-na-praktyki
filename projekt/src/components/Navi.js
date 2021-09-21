@@ -1,11 +1,10 @@
 import * as React from "react";
-import { 
+import {
 	AppBar,
 	Toolbar,
 	makeStyles,
 	Typography,
 	Button,
-	
 } from "@material-ui/core";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
@@ -18,36 +17,26 @@ const Logo = styled.div`
 `;
 
 const useStyles = makeStyles({
-
-
 	title: {
 		flexGrow: 10,
-	   },
-  
-	
-  });
-
+	},
+});
 
 function Navi() {
-
-	const classes = useStyles()
+	const classes = useStyles();
 
 	return (
 		<div>
 			<AppBar>
-				<Toolbar >
-				
-						<Typography variant='h6' className={classes.title}>
-							<Logo>
+				<Toolbar>
+					<Typography variant="h6" className={classes.title}>
+						<Logo>
 							<Link to="/">
-							<img src={Mylogo} className="logo" alt="logo" />
+								<img src={Mylogo} className="logo" alt="logo" />
 							</Link>
-							</Logo>
-							
-					
-						</Typography>
-						
-						
+						</Logo>
+					</Typography>
+
 					<Link to="/omnie">
 						<Button color="inherit">O mnie</Button>
 					</Link>
@@ -66,10 +55,9 @@ function Navi() {
 					<Link to="/logowanie">
 						<Button color="inherit">logowanie</Button>
 					</Link>
-				
 				</Toolbar>
 			</AppBar>
-	</div>
+		</div>
 	);
 }
 

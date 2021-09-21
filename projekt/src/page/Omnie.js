@@ -33,24 +33,14 @@ function Omnie() {
 		<Container>
 			<Fotka />
 			<br />
-			<Typography
-				variant="button"
-				variant="h2"
-				display="block"
-				gutterBottom
-			>
+			<Typography variant={("button", "h2")} display="block" gutterBottom>
 				{Dane.imie}
 			</Typography>
-			<Typography
-				variant="button"
-				variant="h2"
-				display="block"
-				gutterBottom
-			>
+			<Typography variant={("button", "h2")} display="block" gutterBottom>
 				{Dane.nazwisko}
 			</Typography>
 
-			<Typography variant="body1" variant="h3" gutterBottom>
+			<Typography variant={("body1", "h3")} gutterBottom>
 				{Dane.tekst}
 			</Typography>
 		</Container>
