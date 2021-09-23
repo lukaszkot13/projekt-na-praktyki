@@ -8,6 +8,7 @@ import Logowanie from "./page/Logowanie";
 import MPage from "./components/MPage";
 import SixCard from "./components/SixCard";
 import ListaPostaci from "./page/ListaPostaci";
+import Licznik from "./page/Licznik";
 
 function App() {
 	return (
@@ -27,6 +28,9 @@ function App() {
 				</Route>
 				<Route path="/listapostaci">
 					<ListaPostaci />
+				</Route>
+				<Route path="/licznik">
+					<Licznik />
 				</Route>
 			</Router>
 		</div>

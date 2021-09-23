@@ -27,6 +27,7 @@ function KartaPostaci({ name, image, species, gender }) {
 		<Karta>
 			<div className="card" data-name={name}>
 				<img src={image} alt={name} />
+
 				<div className="container">
 					<Title>{name}</Title>
 					<Title>{gender}</Title>
