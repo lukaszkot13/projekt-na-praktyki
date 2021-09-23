@@ -33,6 +33,10 @@ function Licznik({ defultValue = 0, step = 1 }) {
 	const reset = () => {
 		setValue(0);
 	};
+	const razy = () => {
+		setValue(value * 2);
+		if (value === 0) alert("0 * 0 = 0  :)");
+	};
 	const buttons = [
 		<Button key="minus" onClick={onMinus}>
 			-
@@ -42,6 +46,9 @@ function Licznik({ defultValue = 0, step = 1 }) {
 		</Button>,
 		<Button key="plus" onClick={onAdd}>
 			+
+		</Button>,
+		<Button key="razy" onClick={razy}>
+			*
 		</Button>,
 	];
 	return (
