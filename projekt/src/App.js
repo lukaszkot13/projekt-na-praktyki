@@ -9,32 +9,40 @@ import MPage from "./components/MPage";
 import SixCard from "./components/SixCard";
 import ListaPostaci from "./page/ListaPostaci";
 import Licznik from "./page/Licznik";
+import Stoper from "./page/Stoper";
+import Rejestracja from "./page/Rejestracja";
 
 function App() {
-	return (
-		<div className="App">
-			<Router>
-				<Navi />
-				<Route path="/" exact>
-					<MPage />
-					<SixCard />
-				</Route>
+  return (
+    <div className="App">
+      <Router>
+        <Navi />
+        <Route path="/" exact>
+          <MPage />
+          <SixCard />
+        </Route>
 
-				<Route path="/omnie">
-					<Omnie />
-				</Route>
-				<Route path="/logowanie">
-					<Logowanie />
-				</Route>
-				<Route path="/listapostaci">
-					<ListaPostaci />
-				</Route>
-				<Route path="/licznik">
-					<Licznik />
-				</Route>
-			</Router>
-		</div>
-	);
+        <Route path="/omnie">
+          <Omnie />
+        </Route>
+        <Route path="/logowanie">
+          <Logowanie />
+        </Route>
+        <Route path="/listapostaci">
+          <ListaPostaci />
+        </Route>
+        <Route path="/licznik">
+          <Licznik />
+        </Route>
+        <Route path="/stoper">
+          <Stoper />
+        </Route>
+        <Route path="/rejestracja">
+          <Rejestracja />
+        </Route>
+      </Router>
+    </div>
+  );
 }
 
 export default App;

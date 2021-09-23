@@ -1,0 +1,17 @@
+{
+  "dane": [
+    {
+      "name": "Mateusz",
+      "lastName": "Gabriel",
+      "email": "test@test.pl",
+      "password": "haslo123"
+    },
+    {
+      "id": "ddd",
+      "Name": "ddd",
+      "Surname": "sss",
+      "email": "sss",
+      "password": "sss"
+    }
+  ]
+}
