@@ -1,17 +1,16 @@
 {
-  "dane": [
-    {
-      "name": "Mateusz",
-      "lastName": "Gabriel",
-      "email": "test@test.pl",
-      "password": "haslo123"
-    },
-    {
-      "id": "ddd",
-      "Name": "ddd",
-      "Surname": "sss",
-      "email": "sss",
-      "password": "sss"
-    }
-  ]
+	"users": [
+		{
+			"name": "Mateusz",
+			"lastName": "Gabriel",
+			"email": "test@test.pl",
+			"password": "haslo123"
+		},
+		{
+			"name": "Łukasz",
+			"lastName": "Kotowski",
+			"email": "tesssst@test.pl",
+			"password": "haslo12311"
+		}
+	]
 }
