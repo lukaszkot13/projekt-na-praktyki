@@ -21,17 +21,16 @@ const ButtonClick = styled.form`
 `;
 
 function Rejestracja() {
-  const [users, setUsers] = useState();
-  const [name, setName] = useState("");
-  const [secondName, setSecondName] = useState("");
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-
   useEffect(() => {
     axios.get("http://localhost:3000/users").then((res) => {
       setUsers(res.data);
     });
   }, []);
+  const [users, setUsers] = useState();
+  const [name, setName] = useState("");
+  const [secondName, setSecondName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
   const changeName = (event) => setName(event.target.value);
   const changeSecondName = (event) => setSecondName(event.target.value);
