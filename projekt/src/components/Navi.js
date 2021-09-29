@@ -20,6 +20,9 @@ const useStyles = makeStyles({
   title: {
     flexGrow: 10,
   },
+  Link: {
+    textDecoration: "none",
+  },
 });
 
 function Navi() {
