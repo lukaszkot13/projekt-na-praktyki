@@ -1,16 +1,17 @@
 {
-	"users": [
-		{
-			"name": "Mateusz",
-			"lastName": "Gabriel",
-			"email": "test@test.pl",
-			"password": "haslo123"
-		},
-		{
-			"name": "Łukasz",
-			"lastName": "Kotowski",
-			"email": "tesssst@test.pl",
-			"password": "haslo12311"
-		}
-	]
+  "users": [
+    {
+      "name": "Mateusz",
+      "lastName": "Gabriel",
+      "email": "test@test.pl",
+      "password": "haslo123"
+    },
+    {
+      "id": "1",
+      "name": "Łukasz ",
+      "secondName": "Kotowski",
+      "email": "test@test.com",
+      "password": "test"
+    }
+  ]
 }

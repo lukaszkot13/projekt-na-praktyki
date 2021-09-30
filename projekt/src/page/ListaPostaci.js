@@ -4,6 +4,7 @@ import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 
 import KartaPostaci from "../components/KartaPostaci";
+import Sortowanie from "../components/Sortowanie";
 
 const ContainerCard = styled.div`
   display: flex;
@@ -21,8 +22,6 @@ const Header = styled.div`
 `;
 const Navi = styled.div`
   flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
 `;
 
 const Next = "Nastęspna";
@@ -43,7 +42,7 @@ function ListaPostaci() {
   };
 
   const prev = () => {
-    if (page === 1) {
+    if (page === 1 && page >= 0) {
       alert("jesteś na 1 stronie");
     }
     {
@@ -69,9 +68,6 @@ function ListaPostaci() {
     <option value="alive">alive</option>
     <option value="dead">dead</option>
     <option value="unknow">unknow</option>
-    <option value="All" selected="selected">
-      All
-    </option>
   </input>;
 
   return (
@@ -80,14 +76,14 @@ function ListaPostaci() {
         <Navi>
           <h2>Lista postaci ({postaci.info.count})</h2>
           <h2>
-            <Button onClick={prev}>{Prev}</Button>Aktualna strona to (
-            {postaci.info.pages}) na
-            {postaci.info.pages} <Button onClick={next}>{Next}</Button>
+            <Button onClick={prev}>{Prev}</Button>Aktualna strona to ({page}) na
+            ({postaci.info.pages})<Button onClick={next}>{Next}</Button>
           </h2>
+          <Sortowanie />
         </Navi>
         <ContainerCard>
           {postaci.results
-            .filter((item, index) => index < 12)
+            .filter((item, index) => index < 10)
             .map(({ name, image, species, gender, status, id }, index) => (
               <KartaPostaci
                 name={name}

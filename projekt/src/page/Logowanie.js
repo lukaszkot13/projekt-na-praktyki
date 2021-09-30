@@ -1,22 +1,23 @@
 import MyLogo from "../image/tlo.jpg";
 import styled from "styled-components";
-import { Button } from "@material-ui/core";
+import { Button, TextField } from "@material-ui/core";
 
-const Tlo = styled.div`
-  background-image: url(${MyLogo});
-  height: 120vh;
-  background-position: center;
-  background-size: cover;
-  margin-top: 5%;
+const Header = styled.form`
+  margin-top: 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
 `;
 
 function Logowanie() {
   return (
     <div>
-      <Tlo>
-        <button>Logowanie </button>
-        <Button variant="contained">Szukaj</Button>
-      </Tlo>
+      <Header>
+        <TextField e-mail id="email" label="email" />{" "}
+        <TextField password id="password" label="password" />
+        <Button variant="contained">Zaloguj</Button>
+      </Header>
     </div>
   );
 }
