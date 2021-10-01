@@ -6,7 +6,6 @@ import TloLicznik from "../image/tlo_licznik.jpg";
 
 const Header = styled.div`
   background-image: url(${TloLicznik});
-  background-size: cover;
   display: flex;
   flex-direction: column;
   justify-content: start;
@@ -16,13 +15,17 @@ const Header = styled.div`
   width: 100%;
   position: relative;
 `;
+const Wynik = styled.p`
+  color: ${({ value }) => (value % 5 === 0 ? "green" : "red")};
+`;
+const Napis = styled.p`
+  color: ${({ value }) => (value % 5 === 0 ? "red" : "green")};
+`;
 
 function Licznik({ defultValue = 0, step = 1 }) {
   const [value, setValue] = useState(defultValue);
 
-  useEffect(() => {
-    console.log("useEffect");
-  });
+  useEffect(() => {});
   const onMinus = () => {
     setValue(value - step);
   };
@@ -62,9 +65,11 @@ function Licznik({ defultValue = 0, step = 1 }) {
     <div>
       {
         <Header>
-          <h1>Licznik</h1>
-          <Typography variant={("button", "h2")} display="block" gutterBottom>
-            {value}
+          <Typography variant={("overline", "h3")} display="block" gutterBottom>
+            <Napis value={value}>Licznik</Napis>
+          </Typography>
+          <Typography variant={("button", "h3")} display="block" gutterBottom>
+            <Wynik value={value}>{value}</Wynik>
           </Typography>
           <Box
             sx={{

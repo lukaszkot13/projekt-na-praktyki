@@ -16,7 +16,7 @@ const currencies = [
 ];
 
 function Sortowanie() {
-  const [currency, setCurrency] = React.useState("EUR");
+  const [currency, setCurrency] = React.useState("");
 
   const handleChange = (event) => {
     setCurrency(event.target.value);
@@ -38,7 +38,7 @@ function Sortowanie() {
           label="Select"
           value={currency}
           onChange={handleChange}
-          helperText="Please select your currency"
+          helperText="Wybierz "
         >
           {currencies.map((option) => (
             <MenuItem key={option.value} value={option.value}>

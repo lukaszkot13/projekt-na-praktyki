@@ -22,7 +22,7 @@ const Karta = styled.div`
   align-items: center;
 `;
 
-function KartaPostaci({ name, image, species, gender, status, id }) {
+function KartaPostaci({ name, image, species, gender, id, status }) {
   return (
     <Karta>
       <div className="card" data-name={name}>

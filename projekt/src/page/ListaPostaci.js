@@ -64,12 +64,6 @@ function ListaPostaci() {
     return <div>brak danych</div>;
   }
 
-  <input type="select" id="status">
-    <option value="alive">alive</option>
-    <option value="dead">dead</option>
-    <option value="unknow">unknow</option>
-  </input>;
-
   return (
     <div>
       <Header>
@@ -82,10 +76,11 @@ function ListaPostaci() {
           <Sortowanie />
         </Navi>
         <ContainerCard>
-          {postaci.results
+          {postaci?.results
             .filter((item, index) => index < 10)
             .map(({ name, image, species, gender, status, id }, index) => (
               <KartaPostaci
+                key={id}
                 name={name}
                 species={species}
                 image={image}
