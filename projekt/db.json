@@ -12,6 +12,13 @@
       "secondName": "Kotowski",
       "email": "test@test.com",
       "password": "test"
+    },
+    {
+      "id": "NJ9M9tJ",
+      "name": "agata",
+      "secondName": "kot",
+      "email": "kot@kot.pl",
+      "password": "kotkot"
     }
   ]
 }

@@ -42,7 +42,7 @@ function ListaPostaci() {
   };
 
   const prev = () => {
-    if (page === 1 && page >= 0) {
+    if (page === 1 && page === 1) {
       alert("jesteś na 1 stronie");
     }
     {
