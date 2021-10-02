@@ -21,7 +21,7 @@ function SzczegolowaPostac({ postaci }) {
           />
         </Route>
       ))}
-      <div onClick={() => history.push(`/id`)}>`${KartaPostaci}`</div>
+      <div onClick={() => history.push(`/id`)}>${KartaPostaci}</div>
     </div>
   );
 }

@@ -36,13 +36,14 @@ function Logowanie() {
     let login = true;
 
     users.map((correctLogin) =>
-      poprawneDane.password && correctLogin.email === poprawneDane.email
+      correctLogin.password === poprawneDane.password &&
+      correctLogin.email === poprawneDane.email
         ? (login = true)
         : (login = false)
     );
+    if (login === false) alert("podany adres E-mail nie istnieje");
     if (login === true) {
-      history.push("/Success");
-      if (login === false) alert("podany adres E-mail nie istnieje");
+      history.push("/success-login");
     }
   };
 

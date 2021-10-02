@@ -37,14 +37,12 @@ function Rejestracja() {
   const changeSecondName = (event) => setSecondName(event.target.value);
   const changeEmail = (event) => setEmail(event.target.value);
   const changePassword = (event) => setPassword(event.target.value);
-  const changeId = (event) => setId(event.target.value);
 
   const DodajOsobe = () => {
     axios.post(`http://localhost:3000/users`, {
-      id: id,
+      id: email,
       name: name,
       secondName: secondName,
-      email: email,
       password: password,
     });
   };
@@ -61,7 +59,6 @@ function Rejestracja() {
           autoComplete="off"
         >
           <div>
-            {/* <TextField id id="Id" label="Id" onChange={changeId} /> */}
             <TextField name id="Name" label="Name" onChange={changeName} />
             <TextField
               secondName

@@ -11,6 +11,7 @@ import ListaPostaci from "./page/ListaPostaci";
 import Licznik from "./page/Licznik";
 import Stoper from "./page/Stoper";
 import Rejestracja from "./page/Rejestracja";
+import KartaPostaci from "./components/KartaPostaci";
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
         <Route path="/listapostaci">
           <ListaPostaci />
         </Route>
+
         <Route path="/licznik">
           <Licznik />
         </Route>
